@@ -119,7 +119,7 @@ The ViT architecture was selected after experimentation with CNN-based approache
 ### Vision Transformer (ViT) Architecture
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/db278530-bcf6-4279-8fbe-a1ae6a560a11" width="700">
+  <img width="600" height="368" alt="image" src="https://github.com/user-attachments/assets/c34c718f-adfb-49a7-9cb4-6101e3c08dac" />
 </p>
 
 The Vision Transformer processes images through the following stages:
