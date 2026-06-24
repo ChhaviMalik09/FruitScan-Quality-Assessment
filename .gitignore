@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Trained Model Files
+*.pth
+*.pt
+*.safetensors
