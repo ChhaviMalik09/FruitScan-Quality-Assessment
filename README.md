@@ -276,6 +276,61 @@ Final Output
 
 ***
 
+## 📸 Application Screenshots
+
+### 🖼️ Image Upload Interface
+The user can upload a fruit image through the web application for fruit identification, freshness detection, and quality assessment.
+
+<p align="left">
+  <img width="1857" height="725" alt="Screenshot 2026-06-25 173404" src="https://github.com/user-attachments/assets/23f5d83d-a76e-46fc-abff-2b54b06231cd" />
+</p>
+
+---
+
+### 🍎 Fruit Detection and Quality Assessment
+The system identifies the fruit category, predicts freshness status, assigns a quality grade, and provides nutritional information.
+
+<p align="left">
+  <img width="1838" height="891" alt="Screenshot 2026-06-25 173445" src="https://github.com/user-attachments/assets/8493caa1-fd29-431c-bb70-2d7497166ea6" />
+</p>
+
+---
+
+### 📄 Automated PDF Report Generation
+The application can generate a downloadable PDF report containing prediction details and nutritional information.
+
+<p align="left">
+  <img width="1430" height="227" alt="Screenshot 2026-06-25 173511" src="https://github.com/user-attachments/assets/44088ed7-6b93-40b9-9aed-b25e5fa87b6a" />
+</p>
+
+<p align="left">
+  <img width="770" height="690" alt="Screenshot 2026-06-25 173534" src="https://github.com/user-attachments/assets/c535e781-833c-4271-840a-b23f3b5e9785" />
+</p>
+
+---
+
+### 📊 Analytics Dashboard
+The analytics dashboard provides visual insights into fruit detections, freshness distribution, and quality grade statistics.
+
+<p align="left">
+  <img width="1841" height="867" alt="Screenshot 2026-06-25 173654" src="https://github.com/user-attachments/assets/7eb59d05-0b01-41f7-a8bc-253579697af0" />
+</p>
+
+<p align="left">
+  <img width="1837" height="512" alt="Screenshot 2026-06-25 173714" src="https://github.com/user-attachments/assets/f8607ef4-c896-4c79-9216-547b49720563" />
+</p>
+
+---
+
+### 🗂️ Prediction History
+The history section stores previous detections and allows users to review past assessments.
+
+<p align="left">
+  <img width="1857" height="473" alt="Screenshot 2026-06-25 173732" src="https://github.com/user-attachments/assets/2eff21d8-efeb-44f3-a600-ad4064615151" />
+</p>
+
+***
+
 ## 🚀Future Work
 
 The current system provides accurate fruit classification and freshness assessment; however, several enhancements can be implemented in future versions:
