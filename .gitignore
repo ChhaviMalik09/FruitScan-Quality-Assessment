@@ -221,3 +221,13 @@ __marimo__/
 *.pth
 *.pt
 *.safetensors
+
+# Database
+*.db
+
+# Upload folder
+uploads/
+
+# OS files
+.DS_Store
+Thumbs.db
