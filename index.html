@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FruitScan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">🍎🥭🍉🍇</div>
+        <div>
+          <h1 id="projectTitle">FruitScan</h1>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-btn active" data-view="home">Home</button>
+        <button class="nav-btn" data-view="analytics">Analytics</button>
+        <button class="nav-btn" data-view="history">History</button>
+      </nav>
+    </aside>
+
+    <main class="main">
+
+      <section class="hero">
+        <h2 id="heroTitle">Smart Fruit Quality Assessment</h2>
+      </section>
+
+      <section class="view view-home" id="homeView">
+        <div class="card">
+          <div class="section-head">
+            <h3>Detection Workspace</h3>
+            <span>Upload or webcam</span>
+          </div>
+
+          <div class="workspace">
+            <div class="panel dropzone">
+              <input type="file" id="imageInput" accept="image/*" hidden />
+              <img id="uploadPreview" alt="Upload Preview" class="preview hidden" />
+              <div id="uploadHint">
+                <h3>Upload fruit image</h3>
+              </div>
+              <div class="controls">
+                <button class="btn" id="chooseBtn">Choose Image</button>
+                <button class="btn ghost" id="predictImgBtn">Predict</button>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="section-head">
+                <h3>Webcam Mode</h3>
+                <span>Live input</span>
+              </div>
+              <div class="video-wrap">
+                <video id="video" autoplay playsinline muted></video>
+                <canvas id="canvas" class="hidden"></canvas>
+                <img id="webcamPreview" alt="Webcam Preview" class="preview hidden" />
+              </div>
+              <div class="controls">
+                <button class="btn" id="startCamBtn">Start Camera</button>
+                <button class="btn ghost" id="captureBtn">Capture</button>
+                <button class="btn" id="predictCamBtn">Predict</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="result-card">
+            <div class="section-head">
+              <h3>Result Panel</h3>
+            </div>
+            <div class="result-grid">
+              <div class="metric">
+                <label>Fruit Name</label>
+                <div id="fruitName" class="metric-value">-</div>
+              </div>
+              <div class="metric">
+                <label>Fresh / Rotten</label>
+                <div id="freshStatus" class="metric-value">-</div>
+              </div>
+              <div class="metric">
+                <label>Confidence</label>
+                <div id="confidence" class="metric-value">-</div>
+              </div>
+              <div class="metric">
+                <label>Quality Grade</label>
+                <div id="grade" class="metric-value">-</div>
+              </div>
+            </div>
+
+            <div class="metric wide">
+              <label>Nutrition Information</label>
+              <div id="nutrition" class="metric-value small">-</div>
+            </div>
+
+            <div class="metric wide">
+
+              <label>Detected Image</label>
+              
+              <img
+              id="resultImage"
+              src=""
+              style="
+              width:250px;
+              height:250px;
+              object-fit:contain;
+              border-radius:15px;
+              margin:10px auto;
+              display:block;
+              "
+              >
+              
+            </div>
+
+            <div style="margin-top:15px;">
+              <button
+              class="btn"
+              id="downloadReportBtn"
+              style="
+              color:white;
+              font-weight:700;
+              "
+              >
+              📄 Download Report
+              </button>
+            </div>
+
+            <div class="audio-row">
+              <div>
+                <strong>Audio feedback</strong>
+                <p>Start or stop speech anytime</p>
+              </div>
+              <div class="voice-controls">
+                <button class="btn ghost" id="voiceToggleBtn">Voice: On</button>
+                <button class="btn ghost" id="speakNowBtn">Speak</button>
+                <button class="btn ghost danger" id="stopVoiceBtn">Stop</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view hidden view-analytics" id="analyticsView">
+        <div class="card">
+          <div class="section-head">
+            <h3>Analytics Dashboard</h3>
+            <span>Live stats</span>
+          </div>
+          <div class="result-grid">
+
+          <div class="metric">
+          <label>Total Scans</label>
+          <div id="totalScans" class="metric-value">0</div>
+          </div>
+
+          <div class="metric">
+          <label>Fresh</label>
+          <div id="freshCount" class="metric-value">0</div>
+          </div>
+
+          <div class="metric">
+          <label>Rotten</label>
+          <div id="rottenCount" class="metric-value">0</div>
+          </div>
+
+          <div class="metric">
+          <label>Most Detected</label>
+          <div id="topFruit" class="metric-value">-</div>
+          </div>
+
+          </div>
+          <div class="charts-grid">
+            <div class="panel chart-panel">
+              <h4 class="chart-title">
+                Fruit Distribution
+              </h4>
+              <canvas id="fruitPie"></canvas>
+            </div>
+
+            <div class="panel chart-panel">
+              <h4 class="chart-title">
+                Fresh vs Rotten
+              </h4>
+              <canvas id="freshBar"></canvas>
+            </div>
+
+            <div class="panel chart-panel full">
+              <h4 class="chart-title">
+                Quality Grade Distribution
+              </h4>
+              <canvas id="gradeBar"></canvas>
+            </div>
+
+        </div>
+        </div>
+      </section>
+
+      <section class="view hidden view-history" id="historyView">
+        <div class="card">
+          <div class="section-head">
+            <h3>Prediction History</h3>
+          </div>
+          <div class="toolbar">
+            <button class="btn ghost danger" id="clearHistoryBtn">Delete All History</button>
+          </div>
+          <div id="historyList" class="history-list"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
