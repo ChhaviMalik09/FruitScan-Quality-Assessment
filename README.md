@@ -238,6 +238,44 @@ The model learns visual indicators of freshness, including color variations, tex
 
 ***
 
+## Project Workflow
+
+```text
+Image Input
+    │
+    ▼
+Preprocessing
+(Resize, Normalization)
+    │
+    ▼
+Fruit Identification Model
+(Vision Transformer)
+    │
+    ▼
+Freshness Detection Model
+(Vision Transformer)
+    │
+    ▼
+Quality Assessment
+(A / B / C Grade)
+    │
+    ▼
+Nutrition Analysis
+    │
+    ▼
+Final Output
+    │
+    ├──► Fruit Name
+    ├──► Freshness Status
+    ├──► Confidence Score
+    ├──► Quality Grade
+    ├──► Nutritional Information
+    ├──► Audio Feedback
+    └──► PDF Report
+```
+
+***
+
 ## Future Work
 
 The current system provides accurate fruit classification and freshness assessment; however, several enhancements can be implemented in future versions:
