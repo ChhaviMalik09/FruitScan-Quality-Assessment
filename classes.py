@@ -1,0 +1,37 @@
+fruit_classes = [
+'apple',
+'apricot',
+'avocado',
+'banana',
+'black berry',
+'blueberry',
+'cherry',
+'coconut',
+'custard apple',
+'dragonfruit',
+'grape',
+'guava',
+'jackfruit',
+'jujube',
+'kiwi',
+'lychee',
+'mango',
+'muskmelon',
+'orange',
+'papaya',
+'passion fruit',
+'pear',
+'pineapple',
+'pomegranate',
+'raspberry',
+'strawberry',
+'tomato',
+'watermelon',
+'white mulberry',
+'yellow plum'
+]
+
+freshness_classes = [
+'Fresh',
+'Rotten'
+]
