@@ -1,11 +1,11 @@
 # FruitScan- A Smart Fruit Quality Assessment System
 
 ## 🚀Project Overview
-FruitScan is an AI-powered Fruit Quality Assessment System that uses Deep Learning and Computer Vision to identify fruits, evaluate freshness, and assess overall quality from uploaded images.
+FruitScan is an AI-powered Fruit Quality Assessment System that leverages Deep Learning and Computer Vision to automatically identify fruits, evaluate freshness, and assess overall quality from uploaded images.
 
-The system can classify fruits, determine whether they are fresh or rotten, assign quality grades, and provide nutritional information. It also includes features such as detection history, analytics visualization, downloadable PDF reports, and audio-based result output.
+The system can classify different fruit categories, determine whether a fruit is fresh or rotten, assign quality grades, and provide detailed nutritional information. It also includes advanced features such as prediction history management, analytics visualization, downloadable PDF reports, and audio-based result feedback for enhanced user interaction.
 
-The project was developed through dataset organization, exploratory data analysis (EDA), image preprocessing, CNN experimentation, and Vision Transformer (ViT) model development. The final deployment utilizes Vision Transformer models integrated with a Flask backend, and an interactive web interface.
+The project addresses the challenge of manual fruit inspection by providing a fast, consistent, and intelligent quality assessment solution. It was developed through dataset organization, exploratory data analysis (EDA), image preprocessing, CNN-based experimentation, and Vision Transformer (ViT) model development. The final implementation utilizes Vision Transformer models integrated with a Flask backend and an interactive web-based frontend for real-time fruit quality analysis.
 
 ***
 
