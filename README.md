@@ -1,6 +1,6 @@
 # FruitScan- A Smart Fruit Quality Assessment System
 
-## Project Overview
+## 🚀Project Overview
 FruitScan is an AI-powered Fruit Quality Assessment System that uses Deep Learning and Computer Vision to identify fruits, evaluate freshness, and assess overall quality from uploaded images.
 
 The system can classify fruits, determine whether they are fresh or rotten, assign quality grades, and provide nutritional information. It also includes features such as detection history, analytics visualization, downloadable PDF reports, and audio-based result output.
@@ -9,7 +9,7 @@ The project was developed through dataset organization, exploratory data analysi
 
 ***
 
-## Features
+## ✨Features
 
 - 🍎 **Fruit Classification** – Identifies and classifies fruits from uploaded images.
 - 🥬 **Freshness Detection** – Determines whether a fruit is fresh or rotten.
@@ -24,7 +24,7 @@ The project was developed through dataset organization, exploratory data analysi
 
 ***
 
-## Tech Stack
+## 🛠️Tech Stack
 
 ### Frontend
 - HTML5
@@ -51,7 +51,7 @@ The project was developed through dataset organization, exploratory data analysi
 
 ***
 
-## Dataset Description
+## 📊Dataset Description
 
 The project utilizes two image datasets for fruit quality assessment and classification tasks.
 
@@ -69,7 +69,7 @@ The project utilizes two image datasets for fruit quality assessment and classif
 
 ***
 
-## Data Preprocessing
+## 🧹Data Preprocessing
 
 Before training, the datasets underwent several preprocessing steps:
 
@@ -80,7 +80,7 @@ Before training, the datasets underwent several preprocessing steps:
 
 ***
 
-## Model Performance Comparison
+## 📈Model Performance Comparison
 
 Different deep learning approaches were explored during the development phase. The final Vision Transformer (ViT) models were selected based on their superior validation performance.
 
@@ -104,13 +104,13 @@ Different deep learning approaches were explored during the development phase. T
 
 ***
 
-## Final Model Selection
+## 🥇Final Model Selection
 
 Based on the validation results, Vision Transformer (ViT) models were selected for deployment due to their higher accuracy and better generalization performance.
 
 ***
 
-## Model Architecture
+## 🧠Model Architecture
 
 The FruitScan system utilizes **Vision Transformer (ViT)** models for both fruit classification and freshness detection tasks. Unlike traditional Convolutional Neural Networks (CNNs), Vision Transformers divide an image into smaller patches and process them using a self-attention mechanism. This enables the model to capture both local and global relationships within an image, resulting in improved feature representation and classification performance.
 
@@ -189,7 +189,7 @@ The model learns visual indicators of freshness, including color variations, tex
 
 ***
 
-## Training and Evaluation Results
+## 🏆Training and Evaluation Results
 
 ### Fruit Classification Model
 
@@ -238,7 +238,7 @@ The model learns visual indicators of freshness, including color variations, tex
 
 ***
 
-## Project Workflow
+## 🔄Project Workflow
 
 ```text
 Image Input
@@ -276,7 +276,7 @@ Final Output
 
 ***
 
-## Future Work
+## 🚀Future Work
 
 The current system provides accurate fruit classification and freshness assessment; however, several enhancements can be implemented in future versions:
 
