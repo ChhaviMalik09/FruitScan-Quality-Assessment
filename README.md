@@ -276,7 +276,7 @@ Final Output
 
 ***
 
-## 📸 Application Screenshots
+## 📸Application Screenshots
 
 ### 🖼️ Image Upload Interface
 The user can upload a fruit image through the web application for fruit identification, freshness detection, and quality assessment.
@@ -328,6 +328,41 @@ The history section stores previous detections and allows users to review past a
 <p align="left">
   <img width="1857" height="473" alt="Screenshot 2026-06-25 173732" src="https://github.com/user-attachments/assets/2eff21d8-efeb-44f3-a600-ad4064615151" />
 </p>
+
+***
+
+## 🚀Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/ChhaviMalik09/FruitScan-Quality-Assessment.git
+cd FruitScan-Quality-Assessment
+```
+
+### 2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the backend
+
+```bash
+python app.py
+```
+
+### 4. Open the frontend
+
+Open the `frontend/index.html` file in your browser.
+
+---
+
+### ⚠️ Note
+
+The trained model weights (`.pth` and `.safetensors` files) are **not included** in this repository due to their large size and to protect the original trained models.
+
+This repository contains the complete source code, project structure, and implementation. To run the project locally, the trained model files must be placed in the appropriate `models/` directory.
 
 ***
 
